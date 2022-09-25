@@ -17,12 +17,10 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: roelvandegrint.azurecr.io/frontend:0.4.0
+          image: roelvandegrint.azurecr.io/frontend:0.3.2
           env:
             - name: WEATHERFORECASTSERVICE__BASEURI
               value: http://weathersvc.weather-system-dev.svc.cluster.local
-            - name: WEATHERSYSTEM__ENVIRONMENT
-              value: DEV
       imagePullSecrets:
         - name: roelvandegrint-acr
 ---
