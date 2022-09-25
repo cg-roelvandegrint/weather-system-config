@@ -21,8 +21,6 @@ spec:
           env:
             - name: WEATHERFORECASTSERVICE__BASEURI
               value: http://weathersvc.default.svc.cluster.local
-            - name: Dummy
-              value: Value
       imagePullSecrets:
         - name: roelvandegrint-acr
 ---
