@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weathersvc
+  labels:
+    app: weathersvc
+spec:
+  revisionHistoryLimit: 0
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weathersvc
+  template:
+    metadata:
+      labels:
+        app: weathersvc
+    spec:
+      containers:
+        - name: weathersvc
+          image: roelvandegrint.azurecr.io/weather-service:0.2.1
+      imagePullSecrets:
+        - name: roelvandegrint-acr
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: weathersvc
+  name: weathersvc
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: weathersvc
+  sessionAffinity: None
+  type: ClusterIP
