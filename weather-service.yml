@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: weathersvc
-          image: roelvandegrint.azurecr.io/weather-service:0.1.0
+          image: roelvandegrint.azurecr.io/weather-service:0.2.0
       imagePullSecrets:
         - name: roelvandegrint-acr
 ---
