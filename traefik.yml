@@ -6,7 +6,7 @@ metadata:
 
 spec:
   rules:
-    - host: roelvandegrint.local
+    - host: dev.roelvandegrint.local
       http:
         paths:
           - path: /
