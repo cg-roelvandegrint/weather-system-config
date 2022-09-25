@@ -18,9 +18,6 @@ spec:
       containers:
         - name: weathersvc
           image: roelvandegrint.azurecr.io/weather-service:0.2.1
-          env:
-            - name: Logging__LogLevel__Default
-              value: Debug
       imagePullSecrets:
         - name: roelvandegrint-acr
 ---
