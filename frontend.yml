@@ -17,6 +17,9 @@ spec:
       containers:
         - name: frontend
           image: roelvandegrint.azurecr.io/frontend:0.3.1
+          env:
+            - name: Logging__LogLevel__Default
+              value: Debug
       imagePullSecrets:
         - name: roelvandegrint-acr
 ---
