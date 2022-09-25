@@ -20,7 +20,7 @@ spec:
           image: roelvandegrint.azurecr.io/frontend:0.3.2
           env:
             - name: WEATHERFORECASTSERVICE__BASEURI
-              value: http://weathersvc.default.svc.cluster.local
+              value: http://weathersvc.weather-service-test.svc.cluster.local
       imagePullSecrets:
         - name: roelvandegrint-acr
 ---
