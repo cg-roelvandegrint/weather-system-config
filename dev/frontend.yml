@@ -23,6 +23,8 @@ spec:
               value: http://weathersvc.weather-system-dev.svc.cluster.local
             - name: WEATHERSYSTEM__ENVIRONMENT
               value: DEV
+            - name: LOGGING__LOGLEVEL__DEFAULT
+              value: Debug
       imagePullSecrets:
         - name: roelvandegrint-acrpull
 ---
