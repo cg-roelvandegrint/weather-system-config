@@ -21,6 +21,8 @@ spec:
           env:
             - name: WEATHERFORECASTSERVICE__BASEURI
               value: http://weathersvc.weather-system-dev.svc.cluster.local
+            - name: WEATHERSYSTEM__ENVIRONMENT
+              value: DEV
       imagePullSecrets:
         - name: roelvandegrint-acrpull
 ---
